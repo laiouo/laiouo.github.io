@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>Oracle学习(11)修改 - 莱的博客</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/laiouo/CDN@master/Favicon.ico" type="image/x-icon" />
+    <meta name="description" content="oracle修改">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle学习(11)修改">
+<meta property="og:url" content="https://risk.ml/2697.html">
+<meta property="og:site_name" content="莱的博客">
+<meta property="og:description" content="oracle修改">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T02:25:22.484Z">
+<meta property="article:author" content="莱">
+<meta property="article:tag" content="Oracle">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1647767837446">
+     
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1647767837446">
+    
+        <link rel="stylesheet" href="/custom.css">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/laiouo/CDN@main/Background.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="莱" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/laiouo/CDN@master/Avatar.jpg" alt="莱"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="莱">
+            <img src="https://cdn.jsdelivr.net/gh/laiouo/CDN@master/Avatar.jpg" alt="莱" alt="莱">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>20</div>
+        <div><span>标签</span>4</div>
+        <div><span>分类</span>4</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:risk.ml" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="http://wpa.qq.com/msgrd?v=3&uin=1917600942&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(249, 174, 8);background-color: rgba(249, 174, 8, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/351495526" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/laiouo" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://www.zhihu.com/people/xu-wei-58-20" target="_blank" mdui-tooltip="{content: '知乎'}" style="color: rgb(30, 136, 229);background-color: rgba(30, 136, 229, .1);">
+            <i class="nexmoefont icon-zhihu"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/信息技术/">信息技术</a>
+          <span class="category-list-count">15</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/实用教程/">实用教程</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/日常生活/">日常生活</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/资源分享/">资源分享</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MarDown/" style="font-size: 15px;">MarDown</a> <a href="/tags/Notion/" style="font-size: 10px;">Notion</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 莱
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index">赣ICP备2021001347号</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/laiouo/CDN@main/cover/oracle.jpg" data-sizes="auto" alt="Oracle学习(11)修改" class="lazyload">
+              <h1>Oracle学习(11)修改</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>171 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+      
+
+      <p>oracle修改</p>
+<span id="more"></span>
+
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>设置的默认值要与列的数据类型一致  例如  数据类型是字符型   ‘112’ 默认值 与  not null / null  位置关系; 正确的位置关系是  默认值 在  not null/null 的前面。</p>
+<p>create table  student (<br>name  varchar(10)      default ‘张三’  null,<br>birth  date,<br>gender varchar(4),<br>major  varchar(10),<br>class  varchar(10),<br>tel  varchar(11)<br>)</p>
+<h4 id="对表的列进行增删改的操作"><a href="#对表的列进行增删改的操作" class="headerlink" title="对表的列进行增删改的操作"></a>对表的列进行增删改的操作</h4><p>alter table student add addr  varchar(50);<br>alter table student modify addr varchar(40);</p>
+<p>update student set addr=nvl(null,0);<br>alter table student modify addr not null;<br>alter table student modify addr  default ‘nanchang’ null;</p>
+<p>alter table student drop column  addr;</p>
+<h4 id="对表的列进行备注"><a href="#对表的列进行备注" class="headerlink" title="对表的列进行备注"></a>对表的列进行备注</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">comment <span class="keyword">on</span> <span class="keyword">column</span>  student.name  <span class="keyword">is</span>  <span class="string">&#x27;姓名&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table student;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查询表"><a href="#查询表" class="headerlink" title="查询表"></a>查询表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+
+
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>莱<br>
+        <strong>本文链接：</strong><a href="https://risk.ml/2697.html" title="https:&#x2F;&#x2F;risk.ml&#x2F;2697.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;risk.ml&#x2F;2697.html</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Oracle/" rel="tag">Oracle</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'KbBQgYI9QGwSkCqsIX27xCyE-gzGzoHsz',
+        appKey: 'ccITCctMu1kdAJT0xBl2zgIL'
+    })
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%A1%A8%E7%9A%84%E5%88%97%E8%BF%9B%E8%A1%8C%E5%A2%9E%E5%88%A0%E6%94%B9%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">对表的列进行增删改的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%A1%A8%E7%9A%84%E5%88%97%E8%BF%9B%E8%A1%8C%E5%A4%87%E6%B3%A8"><span class="toc-number">3.</span> <span class="toc-text">对表的列进行备注</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%A1%A8"><span class="toc-number">4.</span> <span class="toc-text">删除表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">查询表</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1647767837448"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>

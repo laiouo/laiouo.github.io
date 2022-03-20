@@ -1,0 +1,6 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>#nexmoe-content .nexmoe-post .nexmoe-post-cover img{
+    transition: filter .4s ease-in,-webkit-filter .4s ease-in,transform 0.3s;
+}
+#nexmoe-content .nexmoe-post .nexmoe-post-cover img:hover {
+	transform: scale(1.03);
+}
